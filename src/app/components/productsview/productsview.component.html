@@ -1,0 +1,11 @@
+<app-navbar-header></app-navbar-header>
+<div class="search-container">
+  <input type="text" class="search-bar" placeholder="seacrh"/>
+  <button mat-button style="background: mediumseagreen;color: white;padding: 5px;width: max-content;border-radius: 5px">Search</button>
+</div>
+<div class="products-list-container">
+@for(p of products;track p.id){
+  <app-item [product]="p"></app-item>
+}
+
+</div>

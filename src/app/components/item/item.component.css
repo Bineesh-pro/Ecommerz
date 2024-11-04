@@ -1,0 +1,53 @@
+.item{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.pic{
+  height: inherit;
+  width: inherit;
+}
+
+.pic-container{
+  box-shadow: 5px 5px 5px #b3b3b3,
+              5px -5px 5px #d1d0d0;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+.tittle{
+  margin: 5px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.price{
+  font-size: 20px;
+  color: darkblue;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.item-inner-details{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.desc{
+  margin: 5px;
+}
+
+.category{
+  margin: 5px;
+}
+
+.rating{
+  margin: 5px;
+}
+
