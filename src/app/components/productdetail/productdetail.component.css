@@ -1,0 +1,29 @@
+.product-det{
+  display: flex;
+  flex-direction: column;
+}
+
+.product-det-container{
+  margin: 100px;
+  display: flex;
+  justify-content: start;
+  gap: 100px;
+  align-items: center;
+}
+
+.product-det-pic{
+  height: 500px;
+  width: 400px;
+  box-shadow: 5px 5px 5px #bbbbbb,
+              5px -5px 5px #bbbbbb;
+  border-radius: 10px;
+}
+
+.r-prof{
+  display: flex;
+  gap: 10px;
+}
+
+.review{
+  margin: 20px;
+}

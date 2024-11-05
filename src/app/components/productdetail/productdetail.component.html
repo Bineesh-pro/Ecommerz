@@ -1,0 +1,33 @@
+<app-navbar-header></app-navbar-header>
+
+<div class="product-det-container">
+  <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" class="product-det-pic"/>
+  <div class="product-det">
+    <span style="font-weight: bolder;font-size: 30px">Product Name</span>
+    <span style="font-size: 20px">Product Category</span>
+    <span>Product desc</span>
+    <span>Product rating</span>
+    <span>Product price</span>
+  </div>
+</div>
+
+
+  <h3 style="margin-left: 10px;font-style: italic;font-weight: bold;color:deeppink">** Reviews **</h3>
+
+@for(r of reviews;track r.name){
+  <div class="review">
+    <div class="r-prof">
+      <img src="review_prof.png" alt="hello" style="height: 30px;width: 30px"/>
+        <p style="font-weight: bolder;font-size: 20px">{{r.name}}</p>
+        <p style="color: #140086;font-style: italic">{{ r.date }}</p>
+    </div>
+    <div style="margin-left: 30px">
+      <p style="font-weight: bolder;color:green">{{r.msg }}</p>
+      <p>Rating : <span style="color: orangered">{{ r.rating }}</span></p>
+      <p>{{ r.desc }}</p>
+    </div>
+  </div>
+}
+
+
+<app-footer></app-footer>

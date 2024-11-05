@@ -1,0 +1,28 @@
+.footer-container{
+  background: black;
+  padding: 10px;
+  height: max-content;
+}
+
+.footer-text-tittle{
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.footer-text{
+  color: white;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.footer-inner-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-inner-container-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
