@@ -1,13 +1,17 @@
 <app-navbar-header></app-navbar-header>
 
 <div class="product-det-container">
-  <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" class="product-det-pic"/>
+  <img src="{{product?.image}}" class="product-det-pic"/>
   <div class="product-det">
-    <span style="font-weight: bolder;font-size: 30px">Product Name</span>
-    <span style="font-size: 20px">Product Category</span>
-    <span>Product desc</span>
-    <span>Product rating</span>
-    <span>Product price</span>
+    <span style="font-weight: bolder;font-size: 30px;">{{product?.title}}</span>
+    <p class="category"><span style="color: orange">Category : </span>{{product?.category}}</p>
+    <span>{{product?.description}}</span>
+    <p class="rating"><span style="color: red">Rating : </span>{{product?.rating?.rate}}</p>
+    <p class="price">{{product?.price | currency}}</p>
+    <div class="purchase-button" [routerLink]="['/checkout',product?.id]">
+      <img src="purchase-order.png" alt="hello" style="height: 30px;width: 30px;margin-right: 5px"/>
+      <span>Purchase</span>
+    </div>
   </div>
 </div>
 
@@ -18,8 +22,8 @@
   <div class="review">
     <div class="r-prof">
       <img src="review_prof.png" alt="hello" style="height: 30px;width: 30px"/>
-        <p style="font-weight: bolder;font-size: 20px">{{r.name}}</p>
-        <p style="color: #140086;font-style: italic">{{ r.date }}</p>
+        <span style="font-weight: bolder;font-size: 20px">{{r.name}}</span>
+        <span style="color: #140086;font-style: italic">{{ r.date }}</span>
     </div>
     <div style="margin-left: 30px">
       <p style="font-weight: bolder;color:green">{{r.msg }}</p>

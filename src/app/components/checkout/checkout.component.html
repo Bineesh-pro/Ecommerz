@@ -1,0 +1,79 @@
+<app-navbar-header></app-navbar-header>
+
+<h3 style="color: #700010;font-weight: bold;margin: 10px">Checkout</h3>
+<div class="pay-order-container">
+
+  <form style="display: flex;flex-direction: column">
+    <mat-form-field class="example-full-width">
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+      </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Pincode</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  </form>
+
+  <div style="display: flex;flex-direction: column;gap:5px">
+    <div class="cart-card">
+      <span style="font-size: 20px;font-weight: bold">{{ product?.title }}</span>
+      <div class="inner-order-det-container">
+        <img src="{{product?.image}}" alt="img" style="height: 100px;width: 100px;border-radius: 5px"/>
+        <div style="display: flex;flex-direction: column">
+          <span>{{product?.description}}</span>
+          <span style="color: brown">Qty : 1</span>
+          <span style="color:green;font-size: 20px">Price <span style="font-weight: bolder">{{product?.price}}</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="cart-card-bottom">
+      <div style="display: flex;justify-content: space-between">
+        <span>Price : </span>
+        <span style="color: darkgreen">{{product?.price | currency}} </span>
+      </div>
+      <div style="display: flex;justify-content: space-between">
+        <span>Gst : </span>
+        <span style="color: darkgreen">{{ gst | currency}}</span>
+      </div>
+      <div style="display: flex;justify-content: space-between">
+        <span>Total : </span>
+        <span style="font-size: 20px;font-weight: bold;color:darkgreen">{{totalPrice | currency}} </span>
+      </div>
+    </div>
+
+    <mat-radio-group style="margin: 10px">
+        <mat-radio-button value="1">Gpay</mat-radio-button>
+      <mat-radio-button value="2">Card</mat-radio-button>
+      <mat-radio-button value="2">Paytm</mat-radio-button>
+    </mat-radio-group>
+    <div class="purchase-button" (click)="openPaymentSuccessDialog()">
+      <img src="purchase-order.png" alt="hello" style="height: 30px;width: 30px;margin-right: 5px"/>
+      <span>Checkout</span>
+    </div>
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

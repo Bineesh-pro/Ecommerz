@@ -1,5 +1,5 @@
 
-  <div class="item">
+  <div class="item" [routerLink]="['/product-details',product?.id]">
     <div class="pic-container">
       <img src="{{product?.image}}" alt="" class="pic"/>
     </div>
@@ -7,7 +7,7 @@
       <p class="tittle">{{product?.title}}</p>
       <p class="category"><span style="color: orange">Category : </span>{{product?.category}}</p>
       <p class="desc">{{product?.description}}</p>
-      <p class="rating"><span style="color: red">Rating : </span>{{product?.rating?.rate}}</p>
+      <p><span style="color: red;margin-left: 5px">Rating : </span>{{product?.rating?.rate}}</p>
       <p class="price">{{product?.price | currency}}</p>
       <button mat-stroked-button style="background: green;border-radius: 15px;margin:5px;color: white;padding: 5px;height: max-content;width: max-content">Add to Cart</button>
     </div>

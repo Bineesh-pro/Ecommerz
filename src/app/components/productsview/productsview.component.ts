@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ProductService} from '../../service/product.service';
 import {Product} from '../../model/product';
@@ -17,11 +17,15 @@ import {MatButton} from '@angular/material/button';
   templateUrl: './productsview.component.html',
   styleUrl: './productsview.component.css'
 })
-export class ProductsviewComponent {
+export class ProductsviewComponent implements OnInit{
 
-  products?:Array<Product>;
+  products?:Product[];
 
   constructor(private productsService:ProductService) {
+
+  }
+
+  ngOnInit(): void {
     this.productsService.getProducts()
       .subscribe(p => {
         this.products = p;
